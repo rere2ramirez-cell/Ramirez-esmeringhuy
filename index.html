@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renier Ramirez | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111a2e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HOME */
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    gap: 40px;
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text h3 {
+    color: #38bdf8;
+    font-size: 22px;
+}
+
+.home-text h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    margin: 10px 0;
+}
+
+.home-text p {
+    color: #cbd5e1;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0b1120;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 30px #0284c7;
+}
+
+/* GENERAL SECTIONS */
+section:not(.home) {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #38bdf8;
+}
+
+/* ABOUT */
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #cbd5e1;
+}
+
+/* SKILLS AND PROJECTS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(220px, 1fr)
+    );
+    gap: 20px;
+}
+
+.card {
+    background: #172238;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #293952;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+/* CONTACT */
+.contact p {
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111a2e;
+    color: #cbd5e1;
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .home {
+        padding: 50px 5%;
+        gap: 25px;
+    }
+
+    .profile-img {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+/* MOBILE MEDIA QUERY */
+@media screen and (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .home-text h1 {
+        font-size: 36px;
+    }
+
+    .home-text h3 {
+        font-size: 18px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    section:not(.home) {
+        padding: 50px 6%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* SMALL MOBILE MEDIA QUERY */
+@media screen and (max-width: 400px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">My Portfolio</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="home" id="home">
+
+    <div class="home-text">
+        <h3>Hello, I'm</h3>
+        <h1>Renier M. Ramirez</h1>
+        <h3>Student & Future Professional</h3>
+
+        <p>
+            I am a motivated student who wants to learn
+            new things, improve my skills, and achieve
+            my dreams through hard work and perseverance.
+            My goal is to become successful and make
+            my family proud.
+        </p>
+
+        <a href="#about" class="btn">Discover More</a>
+    </div>
+
+    <img src="ren.png.jpg"
+         alt="Renier Profile Picture"
+         class="profile-img">
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
+    <p>
+        I am a student who believes that education,
+        patience, and determination can help me reach
+        my goals. I enjoy learning new skills, exploring
+        technology, and working on creative projects.
+        In the future, I hope to have a good life and
+        support my family.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="section-title">
+        My <span>Skills</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>I use HTML to structure web pages.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>I use CSS to design websites and layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Creativity</h3>
+            <p>I enjoy creating designs and new ideas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Teamwork</h3>
+            <p>I cooperate with others to reach goals.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">
+        My <span>Projects</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>A website that introduces me and my skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>School Presentation</h3>
+            <p>A creative presentation for a school activity.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>A sample web page made with HTML and CSS.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact <span>Me</span>
+    </h2>
+
+    <p>Email: ramirez@gmail.com</p>
+    <p>Location: Sindangan, Ramon Magsaysay</p>
+
+    <a href="mailto:ramirez@gmail.com" class="btn">
+        Send Me an Email
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Renier | My Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
+<p>
+        I am a student who believes that education,
+        patience, and determination can help me reach
+        my goals. I enjoy learning new skills, exploring
+        technology, and working on creative projects.
+        In the future, I hope to have a good life and
+        support my family.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="section-title">
+        My <span>Skills</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>I use HTML to structure web pages.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>I use CSS to design websites and layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Creativity</h3>
+            <p>I enjoy creating designs and new ideas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Teamwork</h3>
+            <p>I cooperate with others to reach goals.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">
+        My <span>Projects</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>A website that introduces me and my skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>School Presentation</h3>
+            <p>A creative presentation for a school activity.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>A sample web page made with HTML and CSS.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact <span>Me</span>
+    </h2>
+
+    <p>Email: ramirez@gmail.com</p>
+    <p>Location: Sindangan, Ramon Magsaysay</p>
+
+    <a href="mailto:ramirez@gmail.com" class="btn">
+        Send Me an Email
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Renier | My Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
